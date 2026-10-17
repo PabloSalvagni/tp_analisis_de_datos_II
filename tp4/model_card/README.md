@@ -56,4 +56,5 @@ Se detectaron disparidades de MAE en: sex, race (ratio min/max por debajo de 0.8
 - **Disparidad por subgrupo:** el MAE es mayor en Male y en White/Asian (grupos de ingreso más alto): el error absoluto crece con el nivel de ingreso.
 - **Subgrupos chicos:** en `race`, Asian y Other (~430 c/u) dan un MAE más ruidoso.
 - **Modelo lineal:** no captura relaciones no lineales ni interacciones complejas.
-- **No usar** para decisiones reales ni fuera del rango de entrenamiento (edad 17-92 años).
+- **No usar para decisiones reales** sobre personas (crédito, empleo, etc.): el MAE global (~27.950 USD) es casi del tamaño del ingreso mediano (~36.400) y la auditoría marcó disparidades por subgrupo (ALERTA en sex y race).
+- **No extrapolar** fuera del rango de entrenamiento (edad 17-92 años): un modelo lineal predice mal fuera del dominio que vio.
